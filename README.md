@@ -32,3 +32,12 @@
 
 [github](https://github.com "打开github")
 
+![自定义图片](c://Users//xxx.jpg)
+
+```c
+	include<stdio.h>
+	int main()
+	{
+		printf("hi");
+		return 0;
+	}
