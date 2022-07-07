@@ -5,4 +5,10 @@
 空行<br><br>
 <font face="黑体">黑体字形</font><br>
 <font size=7>七号字</font><br>
-<font color=#FF0000>红</font>br<>
+<font color=#FF0000>红</font><br>
+*斜体*
+**粗体**
+***粗体斜体***
+
+凸显`关键字`
+~~删除线~~
