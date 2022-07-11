@@ -23,7 +23,6 @@ int main(int argc,char**argv)
 	pthread_attr_init(&attr);
 	pthread_attr_setdetachstate(&attr,PTHREAD_CREATE_DETACHED);
 	thread_create(&attr,argv[1],argv[2],blocksize,thrno);
-    while(1)
-		sleep(1);
+    sleep(1);
 	return 0;
 }
