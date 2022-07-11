@@ -16,17 +16,18 @@ void *jobs(void*pram)
 }
 void thread_create(pthread_attr_t* attr,const char*sfile,const char*dfile,int blocksize,int thrno)
 {
-	int offset;
-	P pram;
-	pram.sfile=sfile;
-	pram.dfile=dfile;
-	pram.blocksize=blocksize;
+
 	pthread_t tid;
 	int flags=0;
 	int err;
 	printf("thrno=%d",thrno);
 	for(flags;flags<thrno;flags++)
 	{
+		int offset;
+		P pram;
+		pram.sfile=sfile;
+		pram.dfile=dfile;
+		pram.blocksize=blocksize;
 		offset=flags*blocksize;
 		pram.offset=offset;
 		printf("flags=%d,offset:%d\n",flags,pram.offset);
@@ -36,5 +37,6 @@ void thread_create(pthread_attr_t* attr,const char*sfile,const char*dfile,int bl
 			printf("thread create error:%s\n",strerror(err));
 			exit(0);
 		}
+		sleep(1);
 	}
 }
